@@ -29,7 +29,8 @@ export class TableComponent implements OnInit {
     'action',
   ];
 
-  @ViewChild(MatPaginator) paginatior!: MatPaginator;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
   @ViewChild(MatSort) sort!: MatSort;
   constructor(
     private ProductService: ProductService,
@@ -46,14 +47,14 @@ export class TableComponent implements OnInit {
     this.ProductService.GetProduct().subscribe((res) => {
       this.productlist = res;
       this.dataSource = new MatTableDataSource<ProductsModel>(this.productlist);
-      this.dataSource.paginator = this.paginatior;
+      this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
   }
 
   Filterchange(data: Event) {
     const value = (data.target as HTMLInputElement).value;
-    this.dataSource.filter = value;
+    this.dataSource.filter = value.trim().toLowerCase();
   }
 
   addproduct() {

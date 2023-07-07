@@ -1,77 +1,49 @@
 {
   "products": [
     {
-      "name": "T-Shirt ",
-      "category": "Tops",
-      "size": "S, M, L",
-      "price": "20",
-      "gender": "Unisex",
-      "discount": "10%",
-      "availability": "In stock",
-      "id": 1,
-      "active": true
+      "name": "dress",
+      "category": "dresses",
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "price": "80",
+      "gender": "female",
+      "discount": "no discount",
+      "availability": "Out of Stock",
+      "id": 7
     },
     {
-      "name": "Jeans ",
-      "category": "Bottoms",
-      "size": "M,L",
-      "price": "49.9911",
-      "gender": "Men",
-      "discount": "20%",
-      "availability": "In stock",
-      "id": 2,
-      "active": true
-    },
-    {
-      "name": "Dress",
-      "category": "Dresses",
-      "size": "XS, S, M",
-      "price": "100",
-      "gender": "Women",
-      "discount": "No Discount",
-      "availability": "In stock",
-      "id": 3
-    },
-    {
-      "name": "Shorts",
-      "category": "Bottoms",
-      "size": "XS, L",
-      "price": "30",
-      "gender": "Women",
-      "discount": "50%",
-      "availability": "Out of stock",
-      "id": 4
-    },
-    {
-      "name": "Shirt ",
-      "category": "Tops",
-      "size": "S, L",
-      "price": "25",
-      "gender": "Men",
-      "discount": "No Discount",
-      "availability": "In stock",
-      "id": 5
-    },
-    {
-      "name": "Suit",
-      "category": "Suits",
-      "size": "38R, 40R, 42R",
-      "price": "499.99111",
-      "gender": "Women",
-      "discount": "10%",
-      "availability": "In stock",
-      "id": 6,
-      "active": true
-    },
-    {
-      "name": "Suit",
-      "category": "Suits",
-      "size": "42L, 44L, 46L",
-      "price": "700",
-      "gender": "Men",
+      "name": "suit ",
+      "category": "suits",
+      "size": [
+        "XS",
+        "S",
+        "M"
+      ],
+      "price": "99.8999",
+      "gender": "male",
       "discount": "20%",
       "availability": "In Stock",
-      "id": 7
+      "id": 8,
+      "active": true
+    },
+    {
+      "name": "t-shirt",
+      "category": "shirts",
+      "size": [
+        "XL",
+        "XXL",
+        "XXXL"
+      ],
+      "price": "29.89",
+      "gender": "male",
+      "discount": "50%",
+      "availability": "Out of Stock",
+      "id": 9
     }
   ],
   "users": [
@@ -121,34 +93,19 @@
       "id": 3
     },
     {
-      "name": "ddd",
-      "lastname": "ddd",
-      "phonenumber": 699111154,
-      "email": "anxhe@faishon.com",
-      "address": "ddd",
-      "term": "2 year",
-      "dob": "2023-07-10T22:00:00.000Z",
+      "name": "ff",
+      "lastname": "ff",
+      "phonenumber": 699555555,
+      "email": "ff@faishon.com",
+      "address": "55555",
+      "term": "Always",
+      "dob": "2023-07-19T22:00:00.000Z",
       "gender": "Male",
       "status": true,
-      "password": "Anxkek333/444....",
-      "role": "Admin",
-      "active": false,
-      "id": 4
-    },
-    {
-      "name": "ddd",
-      "lastname": "dd",
-      "phonenumber": 692222222,
-      "email": "dddd@faishon.com",
-      "address": "ddd",
-      "term": "2 year",
-      "dob": "2023-07-13T22:00:00.000Z",
-      "gender": "Male",
-      "status": true,
-      "password": "dddd333AASSS,...",
+      "password": "Arestia59...vv",
       "role": "User",
       "active": false,
-      "id": 5
+      "id": 4
     }
   ]
 }
