@@ -1,12 +1,41 @@
-mat-card{
-    margin: 2%;
+mat-card {
+  margin: 2%;
 }
 
-button{
-    margin: 2px;
+button {
+  margin: 2px;
 }
 
-th{
-    background-color: black !important;
-    color: white;
+th {
+  color: black;
+  font-weight: bold;
+  background-color: white !important;
+  /* color: white; */
+}
+
+.mat-icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
 }

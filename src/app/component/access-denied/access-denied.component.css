@@ -1,0 +1,31 @@
+section div:nth-child(1),
+section div:nth-child(3) {
+  color: blue;
+  font-size: 40px;
+}
+
+section div:nth-child(1) {
+  margin-top: 100px;
+}
+
+section div:nth-child(2) {
+  width: 100%;
+}
+
+.card {
+  max-width: 750px;
+  margin-top: 50px;
+  padding-top: 50px;
+  margin-left: 327px;
+  border: none;
+  box-shadow: none;
+}
+
+.home-link {
+  color: #ff4081;
+  font-size: 30px;
+}
+.home-link:hover {
+  text-decoration: underline;
+  color: pink;
+}

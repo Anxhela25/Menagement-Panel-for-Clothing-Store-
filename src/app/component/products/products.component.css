@@ -1,0 +1,21 @@
+.mat-tree-node,
+.mat-nested-tree-node {
+  display: flex;
+  align-items: center;
+}
+
+.mat-tree-node {
+  padding-left: 16px;
+}
+
+.mat-nested-tree-node {
+  padding-left: 32px;
+}
+
+.mat-icon-rtl-mirror {
+  transform: rotate(180deg);
+}
+
+.example-tree-invisible {
+  display: none;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+  <mat-card class="card" style="margin-top: 20px">
+    <mat-card-content>
+      <section
+        fxLayout="column wrap"
+        fxLayoutGap="60px"
+        fxLayoutAlign="center center"
+      >
+        <div>
+          <div style="margin-top: 100px; text-align: center">
+            404: Page Not Found!
+          </div>
+        </div>
+        <br />
+        <br />
+        <div>
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </div>
+        <div>
+          <div style="text-align: center">
+            Go to
+
+            <a class="home-link" (click)="redirectToHomePage()"> Home Page </a>
+          </div>
+        </div>
+      </section>
+    </mat-card-content>
+  </mat-card>
+</div>

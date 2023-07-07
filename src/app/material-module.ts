@@ -19,6 +19,11 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   exports: [
@@ -42,6 +47,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatRadioModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatSnackBarModule,
+    MatTreeModule,
+    MatExpansionModule,
+    MatInputModule,
+    MatTooltipModule,
+    MatProgressBarModule,
   ],
 })
 export class MaterialModule {}

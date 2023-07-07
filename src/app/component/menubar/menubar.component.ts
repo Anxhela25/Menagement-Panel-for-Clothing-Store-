@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Routes } from '@angular/router';
+import { AuthService } from 'src/app/service/authservice/auth.service';
 
 @Component({
   selector: 'app-menubar',
@@ -6,9 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./menubar.component.css'],
 })
 export class MenubarComponent {
-  badgevisible = false;
+  constructor(private authService: AuthService) {}
 
-  badgevisibility() {
-    this.badgevisible = true;
+  logout(): void {
+    // Call the logout method from the AuthService
+    this.authService.logout();
+  }
+
+  isAdmin(): boolean {
+    return this.authService.isAdmin();
   }
 }

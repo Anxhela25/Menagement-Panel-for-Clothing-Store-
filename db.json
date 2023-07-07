@@ -1,0 +1,154 @@
+{
+  "products": [
+    {
+      "name": "T-Shirt ",
+      "category": "Tops",
+      "size": "S, M, L",
+      "price": "20",
+      "gender": "Unisex",
+      "discount": "10%",
+      "availability": "In stock",
+      "id": 1,
+      "active": true
+    },
+    {
+      "name": "Jeans ",
+      "category": "Bottoms",
+      "size": "M,L",
+      "price": "49.9911",
+      "gender": "Men",
+      "discount": "20%",
+      "availability": "In stock",
+      "id": 2,
+      "active": true
+    },
+    {
+      "name": "Dress",
+      "category": "Dresses",
+      "size": "XS, S, M",
+      "price": "100",
+      "gender": "Women",
+      "discount": "No Discount",
+      "availability": "In stock",
+      "id": 3
+    },
+    {
+      "name": "Shorts",
+      "category": "Bottoms",
+      "size": "XS, L",
+      "price": "30",
+      "gender": "Women",
+      "discount": "50%",
+      "availability": "Out of stock",
+      "id": 4
+    },
+    {
+      "name": "Shirt ",
+      "category": "Tops",
+      "size": "S, L",
+      "price": "25",
+      "gender": "Men",
+      "discount": "No Discount",
+      "availability": "In stock",
+      "id": 5
+    },
+    {
+      "name": "Suit",
+      "category": "Suits",
+      "size": "38R, 40R, 42R",
+      "price": "499.99111",
+      "gender": "Women",
+      "discount": "10%",
+      "availability": "In stock",
+      "id": 6,
+      "active": true
+    },
+    {
+      "name": "Suit",
+      "category": "Suits",
+      "size": "42L, 44L, 46L",
+      "price": "700",
+      "gender": "Men",
+      "discount": "20%",
+      "availability": "In Stock",
+      "id": 7
+    }
+  ],
+  "users": [
+    {
+      "name": "Anxhela",
+      "lastname": "Jano",
+      "phonenumber": 67945643,
+      "email": "anxhelajano25@faishon.com",
+      "address": "Tirane",
+      "term": "Always",
+      "role": "admin",
+      "dob": "2000-09-24T22:00:00.000Z",
+      "gender": "Female",
+      "status": true,
+      "password": "AnxhelaJano25.",
+      "active": false,
+      "id": 1
+    },
+    {
+      "name": "Klea",
+      "lastname": "Gega",
+      "phonenumber": 98787734,
+      "email": "kleagega08@faishon.com",
+      "address": "Fier",
+      "term": "1 year",
+      "role": "user",
+      "dob": "1994-11-07T23:00:00.000Z",
+      "gender": "Female",
+      "status": true,
+      "password": "KleaGega08.!",
+      "active": false,
+      "id": 2
+    },
+    {
+      "name": "Xhenis",
+      "lastname": "Troka",
+      "phonenumber": 671234556,
+      "email": "xhenistroka@faishon.com",
+      "address": "Tirane",
+      "term": "30 days",
+      "role": "user",
+      "dob": "1997-12-21T23:00:00.000Z",
+      "gender": "Male",
+      "status": true,
+      "password": "XhenisTroka22.",
+      "active": false,
+      "id": 3
+    },
+    {
+      "name": "ddd",
+      "lastname": "ddd",
+      "phonenumber": 699111154,
+      "email": "anxhe@faishon.com",
+      "address": "ddd",
+      "term": "2 year",
+      "dob": "2023-07-10T22:00:00.000Z",
+      "gender": "Male",
+      "status": true,
+      "password": "Anxkek333/444....",
+      "role": "Admin",
+      "active": false,
+      "id": 4
+    },
+    {
+      "name": "ddd",
+      "lastname": "dd",
+      "phonenumber": 692222222,
+      "email": "dddd@faishon.com",
+      "address": "ddd",
+      "term": "2 year",
+      "dob": "2023-07-13T22:00:00.000Z",
+      "gender": "Male",
+      "status": true,
+      "password": "dddd333AASSS,...",
+      "role": "User",
+      "active": false,
+      "id": 5
+    }
+  ]
+}

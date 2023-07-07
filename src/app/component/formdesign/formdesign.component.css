@@ -2,7 +2,9 @@ mat-card {
   margin: 2%;
   text-align: left;
 }
-
+.mat-50 textarea {
+  height: 28px; /* Adjust the value as needed */
+}
 .custom-card {
   max-width: 60%;
   margin: 40px auto;
@@ -19,4 +21,11 @@ mat-card {
 
 button {
   margin: 2px;
+}
+
+.show-password-checkbox {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }

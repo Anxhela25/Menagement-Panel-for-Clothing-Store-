@@ -3,42 +3,77 @@
     <mat-card-content>
       <mat-form-field class="mat-50">
         <mat-label>Name</mat-label>
-        <input formControlName="name" matInput />
+        <input matInput formControlName="name" />
+        <mat-error
+          *ngIf="
+            customerform.get('name')?.hasError('required') &&
+            customerform.get('name')?.touched
+          "
+        >
+          Name is required.
+        </mat-error>
       </mat-form-field>
+
+      <mat-form-field class="mat-50">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastname" />
+        <mat-error
+          *ngIf="
+            customerform.get('lastname')?.hasError('required') &&
+            customerform.get('lastname')?.touched
+          "
+        >
+          Last Name is required.
+        </mat-error>
+      </mat-form-field>
+
       <mat-form-field class="mat-50">
         <mat-label>Email</mat-label>
         <input matInput formControlName="email" />
+        <mat-error
+          *ngIf="
+            customerform.get('email')?.hasError('required') &&
+            customerform.get('email')?.touched
+          "
+        >
+          Email is required.
+        </mat-error>
+        <mat-error *ngIf="customerform.get('email')?.hasError('invalidEmail')">
+          Please enter a valid email address.
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="mat-50">
         <mat-label>Phone</mat-label>
-        <input matInput formControlName="phone" />
+        <input matInput formControlName="phoneNumber" placeholder="+355" />
+        <mat-error
+          *ngIf="
+            customerform.get('phoneNumber')?.hasError('required') &&
+            customerform.get('phoneNumber')?.touched
+          "
+        >
+          Phone is required.
+        </mat-error>
+        <mat-error
+          *ngIf="
+            customerform.get('phoneNumber')?.hasError('invalidPhoneNumber')
+          "
+        >
+          Please enter an Albanian phone number.
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="mat-50">
-        <mat-label>Country</mat-label>
-        <!-- <input matInput> -->
-        <mat-select formControlName="country">
-          <mat-option [value]="item" *ngFor="let item of countrylist">{{
-            item
-          }}</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <mat-form-field>
         <mat-label>Address</mat-label>
-        <!-- <input matInput> -->
         <textarea matInput formControlName="address"></textarea>
-      </mat-form-field>
-
-      <mat-form-field class="mat-50">
-        <mat-label>Term</mat-label>
-        <input [matAutocomplete]="auto" formControlName="term" matInput />
-        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-          <mat-option *ngFor="let item of termlist" [value]="item">
-            {{ item }}
-          </mat-option>
-        </mat-autocomplete>
+        <mat-error
+          *ngIf="
+            customerform.get('address')?.hasError('required') &&
+            customerform.get('address')?.touched
+          "
+        >
+          Address is required.
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="mat-50">
@@ -50,6 +85,80 @@
         ></mat-datepicker-toggle>
         <mat-hint>dd/MM/yyyy</mat-hint>
         <mat-datepicker #picker></mat-datepicker>
+        <mat-error
+          *ngIf="
+            customerform.get('dob')?.hasError('required') &&
+            customerform.get('dob')?.touched
+          "
+        >
+          Date of Birth is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          type="{{ showPassword ? 'text' : 'password' }}"
+        />
+        <mat-checkbox
+          [checked]="showPassword"
+          (change)="togglePasswordVisibility()"
+          class="show-password-checkbox"
+        >
+          Show Password
+        </mat-checkbox>
+        <mat-error
+          *ngIf="
+            customerform.get('password')?.hasError('required') &&
+            customerform.get('password')?.touched
+          "
+        >
+          Password is required.
+        </mat-error>
+
+        <mat-error
+          *ngIf="customerform.get('password')?.hasError('weakPassword')"
+        >
+          Minimum 10 characters with uppercase, lowercase, numbers, and special
+          characters required for the password.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-50">
+        <mat-label>Term</mat-label>
+        <input matInput [matAutocomplete]="auto" formControlName="term" />
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let item of termlist" [value]="item">
+            {{ item }}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-error
+          *ngIf="
+            customerform.get('term')?.hasError('required') &&
+            customerform.get('term')?.touched
+          "
+        >
+          Term is required.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-50">
+        <mat-label>Select Role</mat-label>
+        <mat-select formControlName="role">
+          <mat-option *ngFor="let role of termList" [value]="role">{{
+            role
+          }}</mat-option>
+        </mat-select>
+        <mat-error
+          *ngIf="
+            customerform.get('role')?.hasError('required') &&
+            customerform.get('role')?.touched
+          "
+        >
+          Role is required.
+        </mat-error>
       </mat-form-field>
 
       <div>
@@ -57,15 +166,30 @@
           <mat-radio-button value="Male">Male</mat-radio-button>
           <mat-radio-button value="Female">Female</mat-radio-button>
         </mat-radio-group>
-        <mat-checkbox formControlName="status" color="warn"
-          >Is Active</mat-checkbox
+        <br />
+        <br />
+        <mat-checkbox formControlName="status" color="warn">
+          I have read and agreed to the
+          <b>Terms and Conditions</b>
+        </mat-checkbox>
+        <mat-error
+          *ngIf="
+            customerform.get('status')?.hasError('required') &&
+            customerform.get('status')?.touched
+          "
         >
+          Please agree to the Terms and Conditions.
+        </mat-error>
       </div>
     </mat-card-content>
     <mat-card-footer>
       <div style="margin: 2%; text-align: right">
         <button mat-raised-button type="submit" color="primary">Save</button>
-        <button mat-raised-button color="warn" (click)="clearform()">
+        <button
+          mat-raised-button
+          [ngStyle]="{ 'background-color': '#ff4081', color: 'white' }"
+          (click)="clearform()"
+        >
           Clear
         </button>
       </div>

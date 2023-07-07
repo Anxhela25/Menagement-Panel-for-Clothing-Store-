@@ -1,15 +1,86 @@
-<!-- <h1>Nihira Techiees</h1>
-<h2>Angular 15 - Material UI Tutorial</h2>
-<div>
-<button matBadge="2" matBadgeColor="accent" matBadgeOverlap="false" mat-raised-button color="primary">Welcome</button>
+<div class="card-container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title> Mackenzie Wedding Dress</mat-card-title>
+      <mat-card-subtitle>Dresses</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="../assets/img/dress.jpg"
+      alt="Photo of a dress"
+      [ngClass]="'card-image'"
+    />
+    <mat-card-content>
+      <p>
+        Our Mackenzie designer dress features a flurry of frosted beading with
+        gorgeous three-dimensional petal appliqués on romantic Chantilly lace.
+        The whimsical dress has a boned, sweetheart bodice that meets up with a
+        billowing ball gown skirt and a detachable lace tie back stole for a
+        versatile look.
+      </p>
+    </mat-card-content>
+    <mat-card-actions
+      [ngStyle]="{ display: 'flex', 'justify-content': 'space-between' }"
+    >
+      <button mat-button>View Collection</button>
+      <button mat-button>Save for Later</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Modern Gentleman Suit</mat-card-title>
+      <mat-card-subtitle>Suits</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="../assets/img/men.jpg"
+      alt="Photo of a men suit"
+      [ngClass]="'card-image'"
+    />
+    <mat-card-content>
+      <p>
+        Upgrade your wardrobe with our stunning navy black blazer for men. This
+        impeccably crafted blazer is designed to enhance your formal attire and
+        make a lasting impression. It offers a perfect blend of style and
+        comfort, whether you're attending a business conference or a special
+        event.
+      </p>
+    </mat-card-content>
+    <mat-card-actions
+      [ngStyle]="{ display: 'flex', 'justify-content': 'space-between' }"
+    >
+      <button mat-button>View Collection</button>
+      <button mat-button>Save for Later</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title> The Sophisticated Suit </mat-card-title>
+      <mat-card-subtitle>Suits</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="../assets/img/costume.jpg"
+      alt="Photo of a women suit"
+      [ngClass]="'card-image'"
+    />
+    <mat-card-content>
+      <p>
+        Capture the essence of timeless beauty and grace with our white costume
+        for women. This enchanting ensemble exudes making it perfect for formal
+        events, evening parties. The costume features flowing white fabric that
+        drapes gracefully, enhancing your silhouette with its flattering cut.
+      </p>
+    </mat-card-content>
+    <mat-card-actions
+      [ngStyle]="{ display: 'flex', 'justify-content': 'space-between' }"
+    >
+      <button mat-button>View Collection</button>
+      <button mat-button>Save for Later</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
-<br>
-<div>
-    <button matBadge="2" matBadgeColor="accent" matBadgeSize="small" mat-raised-button color="primary">Welcome</button>
-</div>
-<br>
-<div>
-    <button matBadge="2" matBadgeHidden="false" matBadgeColor="accent" matBadgePosition="before" matBadgeOverlap="false" matBadgeSize="large" mat-raised-button color="primary">Welcome</button>
-</div>
-<br>
-<mat-icon matBadge="3">home</mat-icon> -->

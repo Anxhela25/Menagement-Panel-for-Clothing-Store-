@@ -1,25 +1,72 @@
-<form [formGroup]="myform" (ngSubmit)="Saveuser()">
-<h1 mat-dialog-title>{{inputdata.title}}</h1>
-<div mat-dialog-content>
-   <mat-form-field>
-    <mat-label>Name</mat-label>
-    <input formControlName="name" matInput>
-   </mat-form-field>
-   <mat-form-field>
-    <mat-label>Email</mat-label>
-    <input matInput formControlName="email">
-   </mat-form-field>
-   <mat-form-field>
-    <mat-label>Phone</mat-label>
-    <input matInput formControlName="phone">
-   </mat-form-field>
-   <div>
-    <mat-checkbox formControlName="status">Is Active</mat-checkbox>
-   </div>
-</div>
-<div mat-dialog-actions>
-    <button mat-raised-button type="submit" color="primary">Save</button>
-  <a (click)="closepopup()" mat-raised-button color="warn">Close</a>
-  <!-- <button mat-raised-button [mat-dialog-close]="closemessage" color="accent">Cancel</button> -->
-</div>
+<form [formGroup]="myform" (ngSubmit)="Saveproduct()">
+  <h1 mat-dialog-title>{{ inputdata.title }}</h1>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Category</mat-label>
+      <input matInput formControlName="category" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Size</mat-label>
+      <mat-select formControlName="size" multiple>
+        <mat-option value="XS">XS</mat-option>
+        <mat-option value="S">S</mat-option>
+        <mat-option value="M">M</mat-option>
+        <mat-option value="L">L</mat-option>
+        <mat-option value="XL">XL</mat-option>
+        <mat-option value="XXL">XXL</mat-option>
+        <mat-option value="XXXL">XXXL</mat-option>
+        <!-- Add more size options as needed -->
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput formControlName="price" />
+      <mat-error
+        *ngIf="
+          myform.controls['price'].invalid && myform.controls['price'].dirty
+        "
+      >
+        Please enter a number.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+        <mat-option value="unisex">Unisex</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Discount</mat-label>
+      <input matInput formControlName="discount" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Availability</mat-label>
+      <mat-select formControlName="availability">
+        <mat-option value="in">In Stock</mat-option>
+        <mat-option value="out">Out of Stock</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      mat-raised-button
+      type="submit"
+      color="primary"
+      [disabled]="myform.invalid"
+    >
+      {{ inputdata.id > 0 ? "Edit" : "Save" }}
+    </button>
+    <a
+      (click)="closepopup()"
+      mat-raised-button
+      [ngStyle]="{ 'background-color': '#ff4081', color: 'white' }"
+      >Close</a
+    >
+  </div>
 </form>

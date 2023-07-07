@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <mat-card class="custom-card">
+      <mat-card-content>
+        <form (submit)="login()" [formGroup]="loginForm" class="form">
+          <h2>Log In</h2>
+
+          <mat-form-field>
+            <mat-icon matPrefix>email</mat-icon>
+            <input matInput formControlName="username" placeholder="Email" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-icon matPrefix>lock</mat-icon>
+            <input
+              matInput
+              formControlName="password"
+              [type]="showPassword ? 'text' : 'password'"
+              appShowPassword
+            />
+
+            <mat-icon matSuffix (click)="togglePasswordVisibility()"
+              >remove_red_eye</mat-icon
+            >
+          </mat-form-field>
+          <button mat-raised-button type="submit">Login</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </body>
+</html>

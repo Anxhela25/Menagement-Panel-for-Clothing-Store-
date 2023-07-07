@@ -1,26 +1,41 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AutocompleteComponent } from './component/autocomplete/autocomplete.component';
+import { AuthGuard } from './guard/authguard/auth.guard.';
 
 import { HomeComponent } from './component/home/home.component';
-import { CardComponent } from './component/card/card.component';
-import { SliderComponent } from './component/slider/slider.component';
 import { TableComponent } from './component/table/table.component';
 import { FormdesignComponent } from './component/formdesign/formdesign.component';
-// import { AssociateComponent } from './component/associate/associate.component';
+import { ProductsComponent } from './component/products/products.component';
+import { MenubarComponent } from './component/menubar/menubar.component';
+import { LoginComponent } from './login/login.component';
+import { AccessDeniedComponent } from './component/access-denied/access-denied.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'autocomplete', component: AutocompleteComponent },
+  { path: '', component: LoginComponent },
 
-  { path: 'formdesign', component: FormdesignComponent },
-  { path: 'card', component: CardComponent },
-  { path: 'slider', component: SliderComponent },
-  { path: 'table', component: TableComponent },
-  { path: 'form', component: FormdesignComponent },
-  // { path: 'associate', component: AssociateComponent },
+  {
+    path: 'menubar',
+    component: MenubarComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+
+      { path: 'products', component: ProductsComponent },
+      { path: 'table', component: TableComponent },
+      {
+        path: 'formdesign',
+        component: FormdesignComponent,
+        canActivate: [AuthGuard],
+      },
+
+      {
+        path: '**',
+        component: AccessDeniedComponent,
+      },
+    ],
+  },
+  { path: 'login', component: LoginComponent },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

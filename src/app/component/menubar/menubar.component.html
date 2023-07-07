@@ -1,68 +1,73 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
-  <button (click)="drawer.toggle()" mat-icon-button>
-    <mat-icon>menu</mat-icon>
-  </button>
-
   <span>Clothing Shop </span>
   <span class="example-spacer"></span>
-  <button routerLink="" mat-button>Home</button>
-  <button mat-button>Orders</button>
 
-  <button routerLink="input" mat-button>Products</button>
-  <button mat-button>Sales</button>
-  <!-- <button routerLink="autocomplete" mat-button>Autocomplete</button> -->
-  <button routerLink="formdesign" mat-raised-button color="accent">
+  <button routerLink="home" mat-button>Home</button>
+
+  <button mat-button [matMenuTriggerFor]="product">Products</button>
+  <mat-menu #product="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="women">Women</button>
+    <button mat-menu-item [matMenuTriggerFor]="man">Man</button>
+  </mat-menu>
+
+  <mat-menu #women="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="dresses">Dresses</button>
+    <button mat-menu-item [matMenuTriggerFor]="top">Top</button>
+    <button mat-menu-item [matMenuTriggerFor]="bottoms">Bottoms</button>
+  </mat-menu>
+
+  <mat-menu #dresses="matMenu">
+    <button mat-menu-item>Casual dresses</button>
+    <button mat-menu-item>Cocktail dresses</button>
+    <button mat-menu-item>Maxi dresses</button>
+  </mat-menu>
+
+  <mat-menu #top="matMenu">
+    <button mat-menu-item>Blouses</button>
+    <button mat-menu-item>T-shirts</button>
+    <button mat-menu-item>Tank tops</button>
+  </mat-menu>
+
+  <mat-menu #bottoms="matMenu">
+    <button mat-menu-item>Skirts</button>
+    <button mat-menu-item>Pants</button>
+    <button mat-menu-item>Shorts</button>
+  </mat-menu>
+
+  <mat-menu #man="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="shirts">Shirts</button>
+    <button mat-menu-item [matMenuTriggerFor]="pants">Pants</button>
+    <button mat-menu-item [matMenuTriggerFor]="suits">Suits</button>
+  </mat-menu>
+
+  <mat-menu #shirts="matMenu">
+    <button mat-menu-item>T-shirts</button>
+    <button mat-menu-item>Polo shirts</button>
+  </mat-menu>
+
+  <mat-menu #pants="matMenu">
+    <button mat-menu-item>Jeans</button>
+    <button mat-menu-item>Trousers</button>
+    <button mat-menu-item>Chinos</button>
+  </mat-menu>
+
+  <mat-menu #suits="matMenu">
+    <button mat-menu-item>Formal suits</button>
+    <button mat-menu-item>Tuxedos</button>
+  </mat-menu>
+
+  <button routerLink="table" mat-button>New Products</button>
+
+  <button
+    *ngIf="isAdmin()"
+    routerLink="formdesign"
+    mat-raised-button
+    color="accent"
+  >
     New User
   </button>
 
-  <button (click)="badgevisibility()" mat-icon-button>
-    <mat-icon
-      matBadgeColor="accent"
-      matBadge="14"
-      [matBadgeHidden]="badgevisible"
-      matBadgeSize="small"
-      >notifications</mat-icon
-    >
-  </button>
+  <button routerLink="login" mat-button (click)="logout()">Logout</button>
 </mat-toolbar>
 
-<mat-drawer-container autosize>
-  <mat-drawer #drawer opened="true" mode="side" position="start">
-    <mat-nav-list>
-      <mat-list-item>
-        <button routerLink="card" mat-button>
-          <mat-icon>dashboard</mat-icon> Dashboard
-        </button>
-      </mat-list-item>
-      <mat-list-item>
-        <button routerLink="" mat-button><mat-icon>home</mat-icon> Home</button>
-      </mat-list-item>
-
-      <mat-list-item>
-        <button routerLink="table" mat-button>
-          <mat-icon>table</mat-icon> Table
-        </button>
-      </mat-list-item>
-      <mat-list-item>
-        <button routerLink="slider" mat-button>
-          <mat-icon>fole</mat-icon> Overview
-        </button>
-      </mat-list-item>
-
-      <mat-list-item>
-        <button mat-button><mat-icon>analytics</mat-icon> analytics</button>
-      </mat-list-item>
-      <mat-list-item>
-        <button mat-button><mat-icon>help</mat-icon> Help</button>
-      </mat-list-item>
-      <mat-list-item>
-        <button mat-button><mat-icon>settings</mat-icon> Settings</button>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-drawer>
-  <mat-drawer-content>
-    <div style="text-align: center; min-height: 600px">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-drawer-content>
-</mat-drawer-container>
+<router-outlet></router-outlet>
