@@ -3,13 +3,7 @@
     {
       "name": "dress",
       "category": "dresses",
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL",
-        "XXL"
-      ],
+      "size": ["S", "M", "L", "XL", "XXL"],
       "price": "80",
       "gender": "female",
       "discount": "no discount",
@@ -19,11 +13,7 @@
     {
       "name": "suit ",
       "category": "suits",
-      "size": [
-        "XS",
-        "S",
-        "M"
-      ],
+      "size": ["XS", "S", "M"],
       "price": "99.8999",
       "gender": "male",
       "discount": "20%",
@@ -34,11 +24,7 @@
     {
       "name": "t-shirt",
       "category": "shirts",
-      "size": [
-        "XL",
-        "XXL",
-        "XXXL"
-      ],
+      "size": ["XL", "XXL", "XXXL"],
       "price": "29.89",
       "gender": "male",
       "discount": "50%",
@@ -91,21 +77,6 @@
       "password": "XhenisTroka22.",
       "active": false,
       "id": 3
-    },
-    {
-      "name": "ff",
-      "lastname": "ff",
-      "phonenumber": 699555555,
-      "email": "ff@faishon.com",
-      "address": "55555",
-      "term": "Always",
-      "dob": "2023-07-19T22:00:00.000Z",
-      "gender": "Male",
-      "status": true,
-      "password": "Arestia59...vv",
-      "role": "User",
-      "active": false,
-      "id": 4
     }
   ]
 }

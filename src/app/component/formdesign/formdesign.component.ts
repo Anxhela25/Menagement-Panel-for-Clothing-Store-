@@ -119,7 +119,7 @@ export class FormdesignComponent implements OnInit {
     term: this.builder.control('', Validators.required),
     role: this.builder.control('', Validators.required),
     dob: this.builder.control(null),
-    gender: this.builder.control('Male'),
+    gender: this.builder.control(''),
     status: this.builder.control('', Validators.required),
   });
 
